@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <lable for="string">Nhập từ: </lable>
+     <input type="text" id="string" name=""/>
+     <button onclick="transcript()">Dịch</button>
+     <p id="result"/>
+<script>
+    function transcript() {
+    let english = ["black", "red", "orange", "yellow"];
+    let vietnamses = ["đen", "đỏ", "cam", "vàng"];
+    let string = document.getElementById("string").value;
+    let result = "";
+    for(let i=0; i < english.length; i++) {
+        if (string == english[i]) {
+            result = vietnamses[i];
+        }
+    }
+      document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>
